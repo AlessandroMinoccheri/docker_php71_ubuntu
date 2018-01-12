@@ -51,4 +51,4 @@ RUN sed -e 's/127.0.0.1:9000/0.0.0.0:9000/' \
 
 EXPOSE 9000
 
-CMD ["php-fpm7.1", "-F"]
+ENTRYPOINT /etc/init.d/php7.1-fpm start && bash
