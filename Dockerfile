@@ -36,6 +36,7 @@ RUN apt-get install -y mysql-client
 RUN apt-get install -y curl php7.1-cli
 RUN apt-get install -y git
 RUN apt-get install -y unzip
+RUN apt-get install -y vim
 
 RUN cd /tmp && curl -sS https://getcomposer.org/installer | php && mv composer.phar /usr/local/bin/composer
 
