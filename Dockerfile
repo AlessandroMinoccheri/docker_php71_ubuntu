@@ -42,7 +42,7 @@ RUN cd /tmp && curl -sS https://getcomposer.org/installer | php && mv composer.p
 
 RUN touch /var/log/www.access.log
 
-RUN sed -e 's/127.0.0.1:9000/0.0.0.0:9000/' \
+RUN sed -e 's/\/run\/php\/php7.1-fpm.sock/9000/' \
         -e '/allowed_clients/d' \
         -e '/catch_workers_output/s/^;//' \
         -e '/error_log/d' \
